@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;500;700&family=MedievalSharp&display=swap" rel="stylesheet">
 
   <style>
-       body {
+body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background: #0d0d0d;
@@ -20,7 +20,7 @@
   position: relative;
 }
 
-/* Background images */
+/* Background images - сделаем заметнее */
 .bg-image-top {
   position: absolute;
   top: 0;
@@ -31,8 +31,8 @@
   background-size: cover;
   background-position: center;
   z-index: -2;
-  opacity: 0.15;
-  filter: blur(1px);
+  opacity: 0.25; /* Увеличена видимость с 0.15 до 0.25 */
+  filter: blur(0.5px); /* Уменьшен blur с 1px до 0.5px */
 }
 
 .bg-image-top::before {
@@ -42,7 +42,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 0%, transparent 40%, rgba(13,13,13,0.8) 60%, rgba(13,13,13,0.9) 80%);
+  background: linear-gradient(45deg, transparent 0%, transparent 30%, rgba(13,13,13,0.5) 60%, rgba(13,13,13,0.8) 80%); /* Сделан более прозрачным */
   z-index: 1;
 }
 
@@ -147,12 +147,14 @@ section {
   text-shadow: 0 0 10px #1e90ff;
 }
 
-/* Video grid */
+/* Video grid - изменено на 2 видео */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .video-item {
@@ -489,7 +491,6 @@ footer {
     border-radius: 10px;
   }
 }
- 
   </style>
 </head>
 <body>
@@ -530,31 +531,24 @@ footer {
   Выглядит это вот так 👇</p><br>
   <p><b style="color: red; font-weight: bold;">Важно!</b>
  Для полного восприятия продукта после запуска видео ОБЯЗАТЕЛЬНО нажать на слово "Shorts"</p>
-  <!-- Медиаблок грид с видео -->
-<div class="video-grid">
-  <div class="video-item">
-    <iframe src="https://www.youtube.com/embed/Kivkh23txh4"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-      allowfullscreen
-      playsinline></iframe>
+  
+  <!-- Медиаблок грид с 2 видео -->
+  <div class="video-grid">
+    <div class="video-item">
+      <iframe src="https://www.youtube.com/embed/9boivskT6Jg"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        allowfullscreen
+        playsinline></iframe>
+    </div>
+    <div class="video-item">
+      <iframe src="https://www.youtube.com/embed/egKDZonqC5k"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        allowfullscreen
+        playsinline></iframe>
+    </div>
   </div>
-
-  <div class="video-item">
-    <iframe src="https://youtube.com/embed/CpMazcaEqU8"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-      allowfullscreen
-      playsinline></iframe>
-  </div>
-  <div class="video-item">
-    <iframe src="https://youtube.com/embed/U1MIDWObLGQ"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-      allowfullscreen
-      playsinline></iframe>
-  </div>
-</div>
 
 <br><br>
   <p><b style="color: #4da6ff; font-weight: bold;">Далее։    </b>Технология печати позволяет создать глубокий глянец и очень сочные краски. Мы собираем комплект из 3 портретов и подставки с подсветкой, отправляем фотографу.
@@ -572,21 +566,21 @@ footer {
   <p>Фото оживает и остаётся навсегда</p>
   
   <div class="media-stack">
-    <img src="svetilnik1.jpg" alt="Продукт" onclick="openFullscreen(this)">
+    <img src="product-photo.jpg" alt="Продукт" onclick="openFullscreen(this)">
   </div>
   <p>В наборе: 3 фото-арта + подставка с подсветкой (с нейтральным дизайном под любые съёмки).</p>
-  <p>Днём — глянец и яркие краски.<br>В темноте — сцены начинают светиться.</p>
-  <p><b>Цена за комплект для клиентов: <br>7 950 ₽.</b></p>
+  <p>Днём — глянец и яркие краски.<br>В темноте — сцены начинают светиться.</p>
+  <p><b>Цена за комплект для клиентов: <br>2 990 - 7 950 ₽.</b></p>
 </section>
 
 <!-- Условия -->
 <section>
   <h2>Условия</h2>
   <p>Пассивный доход на собственном продукте</p>
-  <p><b style="color: #4da6ff; font-weight: bold;"> Комиссия:</b>50% от чистой прибыли (~2 500 ₽ с комплекта).</p>
-  <p><b style="color: #4da6ff; font-weight: bold;"> Учёт:</b>за тобой закрепляется Telegram-канал + менеджер, который обслуживает клиентов + доступ к отчётности.</p>
-  <p><b style="color: #4da6ff; font-weight: bold;"> Выплаты:</b>еженедельно, на самозанятый/ИП.</p>
-  <p><b style="color: #4da6ff; font-weight: bold;"> Твоя единственная задача:    </b>нативный контент про новый продукт. Примеры:  </p>
+  <p><b style="color: #4da6ff; font-weight: bold;"> Комиссия:</b> 50% от чистой прибыли (~2 500 ₽ с комплекта).</p>
+  <p><b style="color: #4da6ff; font-weight: bold;"> Учёт:</b> за тобой закрепляется Telegram-канал + менеджер, который обслуживает клиентов + доступ к отчётности.</p>
+  <p><b style="color: #4da6ff; font-weight: bold;"> Выплаты:</b> еженедельно, на самозанятый/ИП.</p>
+  <p><b style="color: #4da6ff; font-weight: bold;"> Твоя единственная задача:</b> нативный контент про новый продукт. Примеры:</p>
   <ul>
     <li>«Смотрите, что я сделал из этого кадра»</li>
     <li>«Как продлить эмоции свадьбы?»</li>
@@ -600,7 +594,7 @@ footer {
   <p>Это не реклама. Абсолютно законный способ заработка в «запрещенограмме» после 1 сентября 2025 года.
 В блоге будет простое информирование и обзоры фото-артов среди привычного контента.
 Никаких цен, никаких призывов купить, только нативные истории про новые форматы и эксперименты.
-Для продаж - Мягкий увод в ТГ, который закреплен за фотографом: «больше моих экспериментов тут» или «закулисье по теме артов на металле тут
+Для продаж - Мягкий увод в ТГ, который закреплен за фотографом: «больше моих экспериментов тут» или «закулисье по теме артов на металле тут».
 Всеми механиками мы поделимся.</p>
   
   <p>Расшифровку всех законов от ФАС можно посмотреть тут.</p>
@@ -635,7 +629,7 @@ footer {
     <div class="card"><b>Целевая аудитория:</b> у тебя уже есть клиенты, которые хотят сохранить эмоции (свадьба, ребёнок, поездка).</div>
     <div class="card"><b>Минимум усилий:</b> продолжай вести блог, остальное мы сделаем.</div>
     <div class="card"><b>Сильные продажи:</b> 100 комплектов в месяц = 250 000 ₽ дохода фотографа.</div>
-    <div class="card"><b>Высокий LTV:</b>   покупатели возвращаются, чтобы напечатать новые фото-арты.
+    <div class="card"><b>Высокий LTV:</b> покупатели возвращаются, чтобы напечатать новые фото-арты.
     Для сомневающихся по цене у наших менеджеров есть мягкие, но эффективные рычаги: меньшие наборы, меньшее количество фото или уменьшенный формат подставки.</div>
   </div>
 </section>
@@ -644,12 +638,12 @@ footer {
 <section>
   <h2>Продли жизнь своим съёмкам</h2>
   <p>Каждая съёмка может приносить деньги снова</p>
-  <p>Обычно фото остаётся в альбоме или Instagram. Мы предлагаем формат, который позволяет клиентам «вернуться к эмоции.</p>
-  <p><b>Показывая арт-комплекты своей аудитории → ты вернешь тех, кто уже делал у тебя фотосессию. Это даст повторные заказы от старых клиентов без твоих усилий.</p>
+  <p>Обычно фото остаётся в альбоме или Instagram. Мы предлагаем формат, который позволяет клиентам «вернуться к эмоции».</p>
+  <p><b>Показывая арт-комплекты своей аудитории → ты вернешь тех, кто уже делал у тебя фотосессию. Это даст повторные заказы от старых клиентов без твоих усилий.</b></p>
   <p>Новый продукт в твоём портфолио. У фотографа обычно два продукта: фотосессия и альбом. Теперь появляется третий: арт-картина на металле. И у тебя свой авторский продукт, которого нет у большинства коллег.</p>
   <p>В праздники это позиционируем как «идеальный подарок для киномана» и делаем состояние. Особенно для детей. Ночник с любимым персонажем, который охраняет ребенка во время сна.</p>
   <p>Для клиентов это «вау-формат», для тебя — новый источник дохода</p>
-  <p><b>Главный +:</b><i>В сезонные праздники позиционирование фото-артов как Великолепный подарок принесут состояние. (Личный опыт)</i></p>
+  <p><b>Главный +:</b> <i>В сезонные праздники позиционирование фото-артов как Великолепный подарок принесут состояние. (Личный опыт)</i></p>
 </section>
 
 <!-- Как начать -->
@@ -665,154 +659,93 @@ footer {
   © 2025. Все права защищены.
 </footer>
 
-<div class="fullscreen-modal" id="fullscreenModal">
-  <div class="fullscreen-content">
-    <button class="fullscreen-close" id="fullscreenClose">×</button>
-    <img id="fullscreenImage" src="" alt="Fullscreen">
-  </div>
 </div>
 
 <script>
-    function openVideoModal(videoId) {
-    const modal = document.getElementById("videoModal");
-    const container = document.getElementById("videoContainer");
+// Carousel functionality
+const carousels = {};
 
-    // embed url
-    const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-
-    container.innerHTML = `
-      <iframe src="${embedUrl}"
-        allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-      </iframe>
-    `;
-
-    modal.classList.add("active");
+function initCarousel(carouselId) {
+  const carousel = document.getElementById(carouselId);
+  const container = carousel.querySelector('.carousel-container');
+  const items = carousel.querySelectorAll('.carousel-item');
+  const dotsContainer = document.getElementById(carouselId + 'Dots');
+  
+  carousels[carouselId] = {
+    currentIndex: 0,
+    totalItems: items.length,
+    container: container
+  };
+  
+  // Create dots
+  for (let i = 0; i < items.length; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'carousel-dot';
+    if (i === 0) dot.classList.add('active');
+    dot.onclick = () => goToSlide(carouselId, i);
+    dotsContainer.appendChild(dot);
   }
-
-  function closeVideoModal() {
-    const modal = document.getElementById("videoModal");
-    const container = document.getElementById("videoContainer");
-
-    modal.classList.remove("active");
-    container.innerHTML = ""; // stop video
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-  function initCarousel(carouselId) {
-    const carousel = document.getElementById(carouselId);
-    const container = carousel.querySelector(".carousel-container");
-    const items = carousel.querySelectorAll(".carousel-item");
-    const dotsContainer = carousel.querySelector(".carousel-dots");
-
-    let index = 0;
-    const total = items.length;
-
-    dotsContainer.innerHTML = "";
-    items.forEach((_, i) => {
-      const dot = document.createElement("div");
-      dot.classList.add("carousel-dot");
-      if (i === 0) dot.classList.add("active");
-      dot.addEventListener("click", () => goToSlide(i));
-      dotsContainer.appendChild(dot);
-    });
-
-    function updateCarousel() {
-      container.style.transform = `translateX(-${index * 100}%)`;
-      const dots = dotsContainer.querySelectorAll(".carousel-dot");
-      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
-    }
-
-    function goToSlide(i) {
-      index = (i + total) % total;
-      updateCarousel();
-    }
-
-    carousel.querySelector(".prev").addEventListener("click", () => goToSlide(index - 1));
-    carousel.querySelector(".next").addEventListener("click", () => goToSlide(index + 1));
-
-
-    let startX = 0;
-    container.addEventListener("touchstart", e => startX = e.touches[0].clientX);
-    container.addEventListener("touchend", e => {
-      let endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) goToSlide(index + 1); // ձախ swipe
-      if (endX - startX > 50) goToSlide(index - 1); // աջ swipe
-    });
-
-
-    let isDown = false;
-    let mouseStartX = 0;
-    container.addEventListener("mousedown", e => {
-      isDown = true;
-      mouseStartX = e.clientX;
-    });
-    container.addEventListener("mouseup", e => {
-      if (!isDown) return;
-      isDown = false;
-      let diff = e.clientX - mouseStartX;
-      if (diff > 50) goToSlide(index - 1);
-      if (diff < -50) goToSlide(index + 1);
-    });
-
-    updateCarousel();
-  }
-
-  initCarousel("imageCarousel");
-});
-  function openFullscreen(img) {
-  const modal = document.getElementById('fullscreenModal');
-  const modalImg = document.getElementById('fullscreenImage');
-  modalImg.src = img.src;
-  modal.classList.add('active');
 }
 
-// Close modal
-document.getElementById('fullscreenClose').addEventListener('click', () => {
-  document.getElementById('fullscreenModal').classList.remove('active');
-});
-
-// Close clicking outside image
-document.getElementById('fullscreenModal').addEventListener('click', e => {
-  if (e.target.id === 'fullscreenModal') {
-    document.getElementById('fullscreenModal').classList.remove('active');
+function changeSlide(carouselId, direction) {
+  const carousel = carousels[carouselId];
+  carousel.currentIndex += direction;
+  
+  if (carousel.currentIndex < 0) {
+    carousel.currentIndex = carousel.totalItems - 1;
+  } else if (carousel.currentIndex >= carousel.totalItems) {
+    carousel.currentIndex = 0;
   }
-});
+  
+  updateCarousel(carouselId);
+}
 
+function goToSlide(carouselId, index) {
+  carousels[carouselId].currentIndex = index;
+  updateCarousel(carouselId);
+}
+
+function updateCarousel(carouselId) {
+  const carousel = carousels[carouselId];
+  const offset = -carousel.currentIndex * 100;
+  carousel.container.style.transform = `translateX(${offset}%)`;
+  
+  // Update dots
+  const dots = document.querySelectorAll(`#${carouselId}Dots .carousel-dot`);
+  dots.forEach((dot, index) => {
+    if (index === carousel.currentIndex) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+}
+
+// Fullscreen functionality
 function openFullscreen(img) {
   const modal = document.getElementById('fullscreenModal');
-  const modalImg = document.getElementById('fullscreenImage');
-
-  modalImg.src = img.src;
+  const fullscreenImg = document.getElementById('fullscreenImage');
+  fullscreenImg.src = img.src;
   modal.classList.add('active');
 }
 
-// Փակելու ֆունկցիա
 function closeFullscreen() {
   const modal = document.getElementById('fullscreenModal');
-  const modalImg = document.getElementById('fullscreenImage');
-
-  modal.classList.remove('active');
-  modalImg.src = ""; 
+  modal.classList.remove('active');ыы
 }
 
-// Close կոճակ
-document.getElementById('fullscreenClose').addEventListener('click', closeFullscreen);
-
-// Դուրս սեղմելիս փակել
-document.getElementById('fullscreenModal').addEventListener('click', e => {
-  if (e.target.id === 'fullscreenModal') {
+// Close modal on click outside
+document.getElementById('fullscreenModal').addEventListener('click', function(e) {
+  if (e.target === this) {
     closeFullscreen();
   }
 });
 
-// Escape ստեղնով փակել
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    closeFullscreen();
-  }
+// Initialize carousels on page load
+document.addEventListener('DOMContentLoaded', function() {
+  initCarousel('imageCarousel');
 });
-
 </script>
+
 </body>
 </html>
